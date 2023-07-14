@@ -5,11 +5,11 @@ class Categories{
 }
 
 List categoriesList=[
-  Categories(img:"gift_card.png",title: "CATEGORIES"),
+  Categories(img:"categories.png",title: "CATEGORIES"),
   Categories(img:"men.png", title: "MEN"),
   Categories(img:"women.png", title: "WOMEN"),
-  Categories(img:"gift_card.png",title: "KIDS"),
-  Categories(img:"gift_card.png",title: "FOOTWEAR"),
-  Categories(img:"gift_card.png", title: "BEAUTY"),
-  Categories(img:"gift_card.png",title: "ACCESSORIES"),
+  Categories(img:"kids.png",title: "KIDS"),
+  Categories(img:"footwear.png",title: "FOOTWEAR"),
+  Categories(img:"beauty.png", title: "BEAUTY"),
+  Categories(img:"accessories.png",title: "ACCESSORIES"),
 ];

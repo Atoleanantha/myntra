@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:myntra/dummy/tshirts.dart';
+import 'package:myntra/screens/search_screen.dart';
 
 class TShirtsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: const Text("Shop"),
+          actions: [
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchScreen()));
+            }, icon: Icon(Icons.search,size: 30,)),
+            IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border,size: 30,)),
+            IconButton(onPressed: (){}, icon: Icon(Icons.shopping_bag_outlined,size: 30,)),
+          ],
+        ),
         body: MediaQuery.removePadding(
             context: context,
             child: GridView.builder(
@@ -18,7 +28,11 @@ class TShirtsScreen extends StatelessWidget {
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Stack(),
+                        Stack(
+                          children: [
+                            Image.asset(tShirtsList[index].img),
+                            ],
+                        ),
                        Row(
                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                          children: [
@@ -41,11 +55,11 @@ class TShirtsScreen extends StatelessWidget {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text("Best Price ",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.green),),
+                            const Text("Best Price ",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.green),),
                             const Icon(Icons.currency_rupee,size: 17,color: Colors.green),
                             Text(tShirtsList[index].bestPrice.toString(),style: TextStyle(fontWeight: FontWeight.bold,color: Colors.green),),
                             const SizedBox(width: 5,),
-                            Text("with coupon",style: TextStyle(fontSize: 10,color: Colors.black45),)
+                            const Text("with coupon",style: TextStyle(fontSize: 10,color: Colors.black45),)
 
                           ],
                         ),

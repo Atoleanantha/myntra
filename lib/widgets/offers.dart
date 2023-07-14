@@ -9,7 +9,7 @@ Widget offers() {
       InkWell(
         onTap: (){},
         child: Container(
-          margin: EdgeInsets.all(6.0),
+          margin:const EdgeInsets.only(left: 3.0,right: 3.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
@@ -31,7 +31,7 @@ Widget offers() {
       aspectRatio: 16 / 9,
       // autoPlayCurve: Curves.fastOutSlowIn,
       enableInfiniteScroll: true,
-      autoPlayAnimationDuration: Duration(milliseconds: 800),
+      autoPlayAnimationDuration:const Duration(milliseconds: 800),
       viewportFraction: 1,
     ),
   );

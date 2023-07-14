@@ -59,27 +59,27 @@ class _HomePage extends State<HomePage> {
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home,color: Colors.black,),
+              icon: Icon(Icons.home,color: Colors.black,size: 30,),
               label: 'Home',
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.add,color: Colors.black,),
+              icon: Icon(Icons.add,color: Colors.black,size: 30,),
               label: 'Fwd',
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.man,color: Colors.black,),
+              icon: Icon(Icons.man,color: Colors.black,size: 30,),
               label: 'Everyday',
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.diamond_outlined,color: Colors.black,),
+              icon: Icon(Icons.diamond_outlined,color: Colors.black,size: 30,),
               label: 'Settings',
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.perm_identity_sharp,color: Colors.black,),
+              icon: Icon(Icons.perm_identity_sharp,color: Colors.black,size: 30,),
               label: 'Profile',
               backgroundColor: Colors.white,
             ),
@@ -102,16 +102,17 @@ class _HomePage extends State<HomePage> {
                 children: [
                   const Text(
                     "BECOME",
-                    style: TextStyle(fontSize: 10),
+                    style: TextStyle(fontSize: 12),
                   ),
                   InkWell(
                       onTap: () {},
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: const [
                           Text(
                             "   INSIDER",
                             style: TextStyle(
-                                fontSize: 10, color: Colors.orangeAccent),
+                                fontSize: 12, color: Colors.orangeAccent),
                           ),
                           Icon(
                             Icons.arrow_forward_ios_outlined,
@@ -127,12 +128,12 @@ class _HomePage extends State<HomePage> {
           actions: [
             IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.notifications_outlined)),
+                icon: const Icon(Icons.notifications_outlined,size:30,)),
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.favorite_border)),
+                onPressed: () {}, icon: const Icon(Icons.favorite_border,size: 30,)),
             IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.shopping_bag_outlined)),
+                icon: const Icon(Icons.shopping_bag_outlined,size: 30,)),
           ],
         ),
         body: SingleChildScrollView(
@@ -143,7 +144,7 @@ class _HomePage extends State<HomePage> {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                height: 30,
+                height: 40,
                 child: InkWell(
                   onTap: () {
                     Navigator.push(

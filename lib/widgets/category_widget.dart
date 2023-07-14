@@ -22,7 +22,8 @@ Widget category() {
                     children: [
                       CircleAvatar(
                         radius: 35,
-                        foregroundColor: Colors.lightGreenAccent,
+                        foregroundColor: Colors.white,
+                        backgroundColor: Color.fromARGB(202, 215, 215, 206),
                         foregroundImage: AssetImage(
                           "images/categories/${content.img}",
                         ),
